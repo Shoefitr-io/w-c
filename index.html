@@ -584,381 +584,6 @@
 			</div>
 		</nav>
 
-		<div class="modal" tabindex="-1" role="dialog" id="cropper-modal">
-			<div class="modal-dialog modal-fullscreen" role="document">
-				<div class="container modal-content p-0">
-					<div class="modal-body p-0">
-						<div
-							class="position-absolute top-0 end-0 z-5"
-							style="z-index: 5"
-						>
-							<span
-								id="close-modal"
-								class="material-symbols-outlined"
-								style="font-size: 30px; cursor: pointer"
-							>
-								close
-							</span>
-						</div>
-						<div id="main_container" class="container mb-3">
-							<div class="row">
-								<div class="col-md-2 mb-3">
-									<div>
-										<div class="mb-3">
-											<img
-												src="./static/images/logo.webp"
-												id="mian-logo-css"
-												class="img-fluid"
-												alt="logo"
-											/>
-											<small
-												>Adjust to desired size</small
-											>
-											<label
-												for="exampleFormControlInput1"
-												class="form-label d-flex align-items-center"
-											>
-												<span
-													class="material-symbols-outlined"
-													>width</span
-												>
-												<span class="ms-2"
-													>Width in cm</span
-												>
-											</label>
-											<input
-												type="number"
-												class="form-control"
-												id="width-input"
-												placeholder="Enter width in cm"
-												min="0"
-												step="1"
-												pattern="[0-9]"
-											/>
-										</div>
-										<div class="mb-3">
-											<label
-												for="exampleFormControlInput1"
-												class="form-label d-flex align-items-center"
-											>
-												<span
-													class="material-symbols-outlined"
-													>height</span
-												>
-												<span class="ms-2"
-													>Height in cm</span
-												>
-											</label>
-											<input
-												type="number"
-												class="form-control"
-												id="height-input"
-												placeholder="Enter height in cm"
-												min="0"
-												max="500"
-												step="1"
-												pattern="[0-9]"
-											/>
-											<small>(up to 500cm)</small>
-										</div>
-
-										<button
-											class="btn btn-secondary d-flex align-items-center"
-											id="fit-button"
-										>
-											<span
-												class="material-symbols-outlined"
-												>fit_screen</span
-											>
-											<span class="ms-2">Fit</span>
-										</button>
-
-										<hr />
-										<div>
-											<h4 class="my-2">Zoom</h4>
-											<span
-												class="material-symbols-outlined"
-											>
-												zoom_in
-											</span>
-											<input
-												type="range"
-												class="form-range"
-												id="customRange1"
-												step="0.1"
-												min="0"
-												max="5"
-												value="0"
-											/>
-										</div>
-										<div>
-											<h4 class="my-2">Rotate</h4>
-											<div
-												class="d-flex justify-content-start align-items-center"
-											>
-												<button
-													class="btn btn-secondary d-flex align-items-center"
-													id="horizontalRotate"
-												>
-													<span
-														class="material-symbols-outlined"
-														>rotate_right</span
-													>
-												</button>
-												<button
-													class="btn btn-secondary d-flex align-items-center ms-3"
-													id="verticalRotate"
-												>
-													<span
-														class="material-symbols-outlined"
-														>rotate_left</span
-													>
-												</button>
-											</div>
-										</div>
-
-										<div>
-											<h4 class="my-2">Reflect</h4>
-											<div class="form-check">
-												<input
-													class="form-check-input"
-													type="checkbox"
-													value=""
-													id="verticalCheckbox"
-												/>
-												<label
-													class="form-check-label d-flex align-items-center"
-													for="vericalCheckbox"
-												>
-													<span
-														class="material-symbols-outlined"
-														>swap_vert</span
-													>
-													<span class="ms-2"
-														>Vertical</span
-													>
-												</label>
-											</div>
-											<div class="form-check">
-												<input
-													class="form-check-input"
-													type="checkbox"
-													value=""
-													id="horizontalCheckbox"
-												/>
-												<label
-													class="form-check-label d-flex align-items-center"
-													for="horizontalCheckbox"
-												>
-													<span
-														class="material-symbols-outlined"
-														>swap_horiz</span
-													>
-													<span class="ms-2"
-														>Horizontal</span
-													>
-												</label>
-											</div>
-										</div>
-										<div>
-											<h4 class="my-2">Filter</h4>
-											<div class="form-check">
-												<input
-													class="form-check-input"
-													type="checkbox"
-													value=""
-													id="grayscale-toggle"
-												/>
-												<label
-													class="form-check-label d-flex align-items-center"
-													for="horizontalCheckbox"
-												>
-													<span
-														class="material-symbols-outlined"
-														>contrast</span
-													>
-													<span class="ms-2"
-														>Grayscale</span
-													>
-												</label>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-8 p-0">
-									<div
-										style="border: 5px solid"
-										class="border-secondary d-flex justify-content-center align-items-center rounded"
-									>
-										<img
-											style="border: 3px solid red"
-											src=""
-											alt="Cropped Image"
-											id="image"
-											height="450px"
-											width="auto"
-										/>
-									</div>
-									<p class="my-2" id="demo1"></p>
-									<div
-										class="row d-flex justify-content-between"
-									>
-										<div class="col-md-6">
-											<p>
-												The delivery time for
-												custom-made fleece products is 1
-												- 2 weeks. Please note that
-												these non-woven wallpapers are
-												produced individually for you
-												and are therefore excluded from
-												the right of withdrawal.
-												Non-woven wallpapers made to
-												measure are delivered without
-												paste. You can add the right
-												amount of paste in the shopping
-												cart optionally.
-											</p>
-										</div>
-										<div
-											class="col-md-6 d-flex justify-content-end"
-										>
-											<div>
-												<h5
-													class="mx-2 d-flex flex-column m-0"
-												>
-													<span>€250.70*</span
-													><small
-														>€25.80*/m<sup
-															>2</sup
-														></small
-													>
-												</h5>
-											</div>
-											<div>
-												<button
-													class="btn btn-outline-secondary"
-												>
-													Add to Note
-												</button>
-												<button
-													class="btn btn-secondary"
-												>
-													Add to Cart
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-2">
-									<div>
-										<h4>Upload Image</h4>
-										<div class="mb-2">
-											<input
-												class="form-control"
-												type="file"
-												id="inputImage"
-												accept="image/*"
-											/>
-										</div>
-									</div>
-									<div>
-										<h4 class="mb-2">Preview</h4>
-										<div class="form-check">
-											<input
-												class="form-check-input"
-												type="checkbox"
-												value=""
-												id="showPreview"
-											/>
-											<label
-												class="form-check-label d-flex align-items-center"
-												for="showPreview"
-											>
-												<span
-													class="material-symbols-outlined"
-												>
-													visibility
-												</span>
-												<span class="ms-2"
-													>Live Preview</span
-												>
-											</label>
-										</div>
-										<div
-											class="my-3"
-											id="showContainer"
-											style="display: none"
-										>
-											<img
-												id="preview-img"
-												src=""
-												alt="Cropped Image Preview"
-												class="img-fluid rounded mx-auto d-block"
-												style="max-height: 200px"
-											/>
-											<div
-												class="d-flex justify-content-center mt-3"
-											>
-												<a
-													id="dwn2"
-													class="btn btn-secondary"
-													download="cropped-image.png"
-													>Download</a
-												>
-											</div>
-										</div>
-										<div class="form-check">
-											<input
-												class="form-check-input"
-												type="checkbox"
-												value=""
-												id="crop"
-											/>
-											<label
-												class="form-check-label d-flex align-items-center"
-												for="crop"
-											>
-												<span
-													class="material-symbols-outlined"
-												>
-													crop
-												</span>
-												<span class="ms-2">Crop</span>
-											</label>
-										</div>
-										<div
-											class="my-3"
-											id="preview"
-											style="display: none"
-										>
-											<img
-												id="croppedImage"
-												src=""
-												alt="Cropped Image"
-												class="img-fluid rounded mx-auto d-block"
-												style="max-height: 200px"
-											/>
-											<!-- download button -->
-											<div
-												class="d-flex justify-content-center mt-3"
-											>
-												<a
-													id="dwn"
-													class="btn btn-secondary"
-													download="cropped-image.png"
-													>Download</a
-												>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
 		<section class="content-main container block-group px-2">
 			<div
 				class="listing my-3"
@@ -981,7 +606,7 @@
 						<div class="product--badges"></div>
 						<div class="product--info">
 							<a
-								href1="https://www.profitapeten.de/fototapete/natur-landschaft/36324/a.s.-creation-designwalls-2.0-dd118870-fototapete-vlies-366-x-254-cm-kinderzimmer-bunt"
+								href="edit.html?img=img7.jpg"
 								data-animation-speed="fast"
 								class="product--image kb--product-image kb--animation-variation-0"
 								title="AS Creation |  Design Walls 2.0 |  DD118870 |  Photo Wallpaper |  fleece |  366 x 254 cm |  Nursery |  Colorful"
@@ -1180,7 +805,7 @@
 						<div class="product--badges"></div>
 						<div class="product--info">
 							<a
-								href1="https://www.profitapeten.de/fototapete/natur-landschaft/36365/a.s.-creation-designwalls-2.0-dd118913-fototapete-vlies-384-x-260-cm-kinderzimmer-bunt"
+								href="edit.html?img=img8.jpg"
 								data-animation-speed="fast"
 								class="product--image kb--product-image kb--animation-variation-0"
 								title="AS Creation |  Design Walls 2.0 |  DD118913 |  Photo Wallpaper |  fleece |  384x260cm |  Nursery |  Colorful"
@@ -1379,7 +1004,7 @@
 						<div class="product--badges"></div>
 						<div class="product--info">
 							<a
-								href1="https://www.profitapeten.de/fototapete/natur-landschaft/36375/a.s.-creation-designwalls-2.0-dd118923-fototapete-vlies-384-x-260-cm-kinderzimmer"
+								href="edit.html?img=img9.jpg"
 								data-animation-speed="fast"
 								class="product--image kb--product-image kb--animation-variation-0"
 								title="AS Creation |  Design Walls 2.0 |  DD118923 |  Photo Wallpaper |  fleece |  384x260cm |  nursery"
@@ -1576,7 +1201,7 @@
 						<div class="product--badges"></div>
 						<div class="product--info">
 							<a
-								href1="https://www.profitapeten.de/fototapete/natur-landschaft/36376/a.s.-creation-designwalls-2.0-dd118924-fototapete-vlies-384-x-260-cm-kinderzimmer-bunt"
+								href="edit.html?img=img10.jpg"
 								data-animation-speed="fast"
 								class="product--image kb--product-image kb--animation-variation-0"
 								title="AS Creation |  Design Walls 2.0 |  DD118924 |  Photo Wallpaper |  fleece |  384x260cm |  Nursery |  Colorful"
@@ -1775,7 +1400,7 @@
 						<div class="product--badges"></div>
 						<div class="product--info">
 							<a
-								href1="https://www.profitapeten.de/fototapete/natur-landschaft/36382/a.s.-creation-designwalls-2.0-dd118930-fototapete-vlies-384-x-260-cm-landschaft"
+								href="edit.html?img=img11.jpg"
 								data-animation-speed="fast"
 								class="product--image kb--product-image kb--animation-variation-0"
 								title="AS Creation |  Design Walls 2.0 |  DD118930 |  Photo Wallpaper |  fleece |  384x260cm |  Landscape"
@@ -1972,7 +1597,7 @@
 						<div class="product--badges"></div>
 						<div class="product--info">
 							<a
-								href1="https://www.profitapeten.de/fototapete/natur-landschaft/36392/a.s.-creation-designwalls-2.0-dd118940-fototapete-vlies-384-x-260-cm-strand-meer"
+								href="edit.html?img=img12.jpg"
 								data-animation-speed="fast"
 								class="product--image kb--product-image kb--animation-variation-0"
 								title="AS Creation |  Design Walls 2.0 |  DD118940 |  Photo Wallpaper |  fleece |  384x260cm |  Beach Sea"
@@ -2174,7 +1799,7 @@
 						</div>
 						<div class="product--info">
 							<a
-								href1="index.html?img=img3.jpg"
+								href="edit.html?img=img3.jpg"
 								data-animation-speed="fast"
 								class="product--image kb--product-image kb--animation-variation-0"
 								title="AS Creation |  Boys &amp; Girls 6 |  369343 |  non-woven wallpaper |  Nursery |  0.53 x 10.05m |  Pink"
@@ -2375,7 +2000,7 @@
 						</div>
 						<div class="product--info">
 							<a
-								href1="index.html?img=img4.jpg"
+								href="edit.html?img=img4.jpg"
 								data-animation-speed="fast"
 								class="product--image kb--product-image kb--animation-variation-0"
 								title="AS Creation Titanium 3 |  382041 |  Non-woven wallpaper 3D optics |  0.53m x 10.05m |  Green"
@@ -2573,7 +2198,7 @@
 						</div>
 						<div class="product--info">
 							<a
-								href1="index.html?img=img6.jpg"
+								href="edit.html?img=img6.jpg"
 								data-animation-speed="fast"
 								class="product--image kb--product-image kb--animation-variation-0"
 								title="AS Creation |  Secret Garden |  336042 |  non-woven wallpaper |  floral look |  0.53 x 10.05m |  Brown"
